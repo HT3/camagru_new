@@ -11,10 +11,10 @@
     <body>
         <div class="loginbox">
             <img src="./images/avatar.png" class="avatar">
-            <h1>Login Here</h1>
+            <h1>Login</h1>
             <form method="POST" name="login" action="forms/login_form.php">
                 <p>Username</p>
-                <input type="text" name="username_login" pattern=".{5,100}" required autocomplete="off" placeholder="Enter Username">
+                <input type="text" name="username_login" pattern=".{5,100}" placeholder="Enter Username">
                 <p>Password</p>
                 <input type="password" name="password_login" required autocomplete="off" placeholder="Enter Password">
                 <button type="submit" name="submit_login" class="btn">Login</button>

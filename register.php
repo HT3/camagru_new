@@ -14,9 +14,9 @@
             <h1>Register Here</h1>
             <form method="POST" action="./forms/register_form.php">
                 <p>Username</p>
-                <input type="text" name="username_signup" placeholder="Enter Username" pattern=".{5,100}" required autocomplete="off" value="<?php echo $username; ?>">
+                <input type="text" name="username_signup" placeholder="Enter Username" pattern=".{5,100}" value="<?php echo $username; ?>">
                 <p>Email</p>
-                <input type="email" name="email_signup" placeholder="Enter Email" required autocomplete="off" value="<?php echo $email; ?>">
+                <input type="email" name="email_signup" placeholder="Enter Email" value="<?php echo $email; ?>">
                 <p>Password</p>
                 <input type="password" name="password_signup" required autocomplete="off" placeholder="Enter Password">
                 <p>Confirm Password</p>

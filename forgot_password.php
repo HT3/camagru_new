@@ -71,8 +71,8 @@
         <hr class="w3-clear">
         <h6>Please enter your email to recieve a temporary password:</h6><br/>
         <form action="forgot_password.php" method="POST">
-        <input type="email" required autocomplete="off" name="email">
-        <button type="email" class="btn" value="OK" name="submit_forgot_password">Submit</button>
+        <input type="email" name="email" required>
+        <button type="submit" class="btn" value="OK" name="submit_forgot_password">Submit</button>
         </form>
         </div>
     </body>

@@ -1,5 +1,5 @@
 <?php
-    function delete($username, $password)
+    function change_comment_notification($comment_email, $username)
     {
         session_start();
         $host = 'localhost';
@@ -12,16 +12,17 @@
             $conn = new PDO($dsn, $user, $pass, $db_options);
         }
         catch(PDOException $error) {
-            echo "Connection Error: ".$error->getMessage();
+            echo "Connection Failed: ".$error->getMessage();
             return (-1);
         }
-        $sql = "DELETE FROM users WHERE username='$username' AND password='$password'";
+        $sql = "UPDATE users SET comment_choice='$comment_email' WHERE username='$username'";
         try {
-            $conn->exec($sql);
+            $ex = $conn->prepare($sql);
+            $ex->execute();
         }
-        catch (PDOException $e) {
+        catch(PDOException $e) {
             echo $e->getMessage();
-            return(0);
+            return (0);
         }
         $conn = null;
         return (1);

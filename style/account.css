@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../images/white_background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loginbox {
+    margin: auto;
+    width: 60%;
+    border: 3px solid dodgerblue;
+    color: #fff;
+    background: dodgerblue;
+    padding: 70px 30px;
+  }
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"], input[type="email"], select
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn
+{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 60%;
+    background: #fff;
+    color: dodgerblue;
+    font-size: 18px;
+}
+
+.btn :hover
+{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: lightgrey;
+}
+
+.loginbox a:hover{
+    color: #fff;
+}
+
+.error {
+    width: 92%; 
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+  .success {
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+  }
+
+  .dodgerblue {
+    background: dodgerblue;
+    color: white;
+}
+
+.w3-clear:after, .w3-clear:before {
+    content: "";
+    display: table;
+    clear: both
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: dodgerblue;
+}

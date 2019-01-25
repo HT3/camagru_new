@@ -17,7 +17,6 @@
         <title>Camagru</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./style/index.css">
-        <link rel="stylesheet" type="text/css" href="./webcam.js">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -31,21 +30,12 @@
             <li><a href="./contact.html">Contact</a></li>
         </ul>
         <p>&nbsp;</p>
-        <div id="options" class="choice">
-            <label for="cam_file">Input Method:</label>
-            <select name="cam_file" id="cam_file">
-                <option value="camera">Webcam</option>
-                <option value="image_upload">Image Upload</option>
-            </select>
+        <div class="choice">
+
         </div>
         <p>&nbsp;</p>
-        <div id="camera" class="loginbox">
+        <div class = "loginbox">
             <video id="video">Video No Work</video>
         </div>
-        <div id="upload" class="loginbox">
-            <img id="upload_image" alt="Please Upload An Image" class="photobooth"><br/>
-            <input type="file" name="img_upload" id="img_upload">
-        </div>
-        <script src="./camera.js"></script>
     </body>
 </html>
