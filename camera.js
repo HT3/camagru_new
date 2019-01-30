@@ -1,5 +1,5 @@
 var width = 320;
-var height = 320;
+var height = 640;
 var stream = false;
 var video = document.getElementById('video');
 var canvas = document.getElementById('canvas');
@@ -49,35 +49,7 @@ var image2 = document.getElementById('image_2');
 
     setInterval(web_upload(),300);
 
-    function clearphoto() {
-            var context = canvas.getContext('2d');
-            context.fillStyle = "#AAA";
-            context.fillRect(0, 0, canvas.width, canvas.height);
-            var data = canvas.toDataURL('image/png');
-            photo.setAttribute('src', data);
-        }
-        start.addEventListener('click', function(ev) {
-            takepicture();
-            ev.preventDefault();
-        }, false);
-        cam_file_sel.addEventListener('change', function() {
-            if (cam_file_sel.value == "file") {
-                document.getElementById('camera').hidden = true;
-                document.getElementById('image_upload').hidden = true;
-            }
-        }, false);
-
-        document.querySelector('#img_upload').addEventListener('change', function() {
-            if (this.files.length === 0)
-                return;
-            var file = this.files[0];
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                document.querySelector('#upload_image').src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }, false);
-
+    
     function takepicture() {
         var exportBtn = document.getElementById('export');
         image2.value = img2.src;
@@ -107,6 +79,36 @@ var image2 = document.getElementById('image_2');
             clearphoto();
         }
     }
+    
+    function clearphoto() {
+            var context = canvas.getContext('2d');
+            context.fillStyle = "#AAA";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            var data = canvas.toDataURL('image/png');
+            photo.setAttribute('src', data);
+        }
+        start.addEventListener('click', function(ev) {
+            takepicture();
+            ev.preventDefault();
+        }, false);
+        cam_file_sel.addEventListener('change', function() {
+            if (cam_file_sel.value == "file") {
+                document.getElementById('camera').hidden = true;
+                document.getElementById('image_upload').hidden = true;
+            }
+        }, false);
+
+        document.querySelector('#img_upload').addEventListener('change', function() {
+            if (this.files.length === 0)
+                return;
+            var file = this.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.querySelector('#upload_image').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }, false);
+
 
     document.querySelector('#sticker_select').addEventListener('change', function() {
         document.querySelector('#sticker_image').src = document.getElementById('sticker_select').value;

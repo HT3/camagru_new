@@ -12,7 +12,7 @@
             $conn = new PDO($dsn, $user, $pass, $db_options);
         }
         catch(PDOException $error) {
-            echo "Connection Failed: ".$error->getMessage();
+            echo "Connection Failure: ".$error->getMessage();
             return (-1);
         }
         $sql = "UPDATE users SET comment_choice='$comment_email' WHERE username='$username'";

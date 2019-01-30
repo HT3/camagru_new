@@ -13,7 +13,7 @@
     }
     catch(PDOException $err)
     {
-        echo "Connection Failed: ".$err->getMessage();
+        echo "Connection Failure: ".$err->getMessage();
         return (-1);
     }
     $sql = "SELECT * FROM users WHERE conf_code='$passkey'";

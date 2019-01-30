@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    background: url(../images/white_background.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.choice {
+    margin: auto;
+    width: 30%;
+    border: 3px solid dodgerblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.whole {
+    margin: auto;
+    width: 50%;
+    height: 80%;
+    border: 3px solid dodgerblue;
+    padding: 10px;
+}
+
+.loginbox {
+    margin: auto;
+    width: 40%;
+    height: 500px;
+    border: 3px solid dodgerblue;
+    padding: 10px;
+}
+
+.loginbox input[type="text"], input[type="password"], input[type="email"], 
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: dodgerblue;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.photobooth {
+    height: 90%;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}

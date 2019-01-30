@@ -13,7 +13,7 @@
             $conn = new PDO($dsn, $user, $pass, $db_options);
         }
         catch(PDOException $error) {
-            echo "Connection Failed: ".$err->getMessage();
+            echo "Connection Failure: ".$err->getMessage();
             return (-1);
         }
         $sql = "INSERT INTO users (username, email, password, conf, conf_code) VALUES ('$username', '$email', '$password', '0', '$ccode')";
