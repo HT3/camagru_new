@@ -44,14 +44,20 @@
         </div>
         <p>&nbsp;</p>
         <div id="upload" class="loginbox">
-            <img id="upload_image" alt="Please Upload An Image" class="photobooth"><br/>
-            <input type="file" name="img_upload" id="img_upload">
+            <!-- <img id="upload_image" alt="Please Upload An Image" class="photobooth"><br/>
+            <input type="file" name="img_upload" id="img_upload"> -->
+            <form method="post" action="functions/merge.php" enctype='multipart/form-data'>
+                           <!-- <input type='file' name='image'/>
+                           <input type='submit' value='insert' name='insert'> -->
+                           <input type="file" name='insert'/>
+                           <input type="submit"/>Upload
+            </form>
         </div>
         <p>&nbsp;</p>
         <div class="box">
-            <form id="export" action="functions/image_merge.php" method="POST">
-                <input type="hidden" name="image_1" id="merged_image" value="">
-                <input type="hidden" name="image_2" id="image_2" value="">
+            <form id="export" action="functions/merge.php" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image_1" id="merged_image" value="">
+                <input type="file" name="image_2" id="image_2" value="">
                 <button type="submit" class="btn" name="exp_photo" id="export_photo" value="OK">Upload</button>
             </form>
         </div>

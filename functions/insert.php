@@ -20,7 +20,7 @@
             $conn->exec($sql);
         }
         catch (PDOException $e) {
-            echo "Error: ".$e->getMesaage();
+            echo "Error: ".$e->getMessage();
         }
         $conn = null;
         return (1); 

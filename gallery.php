@@ -37,7 +37,7 @@
                       </form>';
                 echo '<form action="functions/delete_image.php" method="POST">
                         <input type=hidden name="true_username" value="'.$value['username'].'">
-                        <button type="submit" name="delete_button" value="'.$value['pic_id'].'"/><img class="like" src="images/delete.png"></button>   
+                        <button type="submit" name="delete_button" value="'.$value['pic_id'].'"/><img class="like" src="images/delete.png"></button>
                       </form>
                       <form action="">
                       </form>
