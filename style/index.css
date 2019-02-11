@@ -19,12 +19,32 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.choice {
-    margin: auto;
-    width: 150px;
-    border: 3px solid dodgerblue;
-    padding: 10px;
+.capture-button {
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 260px;
+    background: dodgerblue;
+    color: #fff;
+    font-size: 18px;
 }
+
+#photo {
+    border: 1px solid black;
+    width:320px;
+    height:240px;
+  }
+
+  #canvas {
+    display:none;
+  }
+  
+  #video {
+    border: 1px solid black;
+    width:320px;
+    height:240px;
+  }  
 
 .choice {
     margin: auto;
@@ -34,11 +54,10 @@ body {
 }
 
 .loginbox {
-    margin: auto;
-    width: 50%;
-    height: 30%;
+    margin:0 auto;
+    width: 400px;
+    height: 350px;
     border: 3px solid dodgerblue;
-    padding: 10px;
 }
 
 .loginbox input[type="text"], input[type="password"], input[type="email"], 

@@ -18,8 +18,6 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./style/index.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <script src="capture.js">
-        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
@@ -41,27 +39,28 @@
         </div>
         <p>&nbsp;</p>
         <div id="camera" class="loginbox">
-            <video id="video" autoplay="true">Video stream not available.</video>
-            <button id="startbutton">Take photo</button>
+        <video id="video" autoplay></video>
+            <a href="#" id="capture" class="capture-button">Take photo</a>
         </div>
         <p>&nbsp;</p>
         <div id="upload" class="loginbox">
             <!-- <img id="upload_image" alt="Please Upload An Image" class="photobooth"><br/>
             <input type="file" name="img_upload" id="img_upload"> -->
             <form method="post" action="functions/merge.php" enctype='multipart/form-data'>
-                           <!-- <input type='file' name='image'/>
-                           <input type='submit' value='insert' name='insert'> -->
-                           <label for="sticker">Stickers</label>
-                           <select id="sticker" name="sticker">
-                                <option value="./images/old_beard.jpg">Old Beard</option>
-                                <option value="">None</option>
-                           </select>
-                           <input type="file" name='insert'/>
-                           <input type="submit"/>Upload
+               <!-- <input type='file' name='image'/>
+               <input type='submit' value='insert' name='insert'> -->
+               <canvas id="canvas" width="400" height="300"></canvas>
+               <img id="photo" alt="The screen capture will appear in this box."><br/>
+               <label for="sticker">Stickers</label>
+               <select id="sticker" name="sticker">
+                    <option value="./images/old_beard.jpg">Old Beard</option>
+                    <option value="">None</option>
+               </select><br/>
+               <input type="file" name='insert'/><br/>
+               <input type="submit"/>Upload
             </form>
         </div>
         <p>&nbsp;</p>
-        <script>
-        </script>
     </body>
+        <script src="./photo.js"></script>
 </html>
