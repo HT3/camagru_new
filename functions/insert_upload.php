@@ -13,13 +13,16 @@
         echo "Connection Failure: ".$error->getMessage();
         return (-1);
     }
-    print_r($_SESSION);
-    echo $_SESSION['username'];
-    $username = $_SESSION['username'];
-    $file = file_get_contents($_FILES['insert']['tmp_name']);
-    $bfile = base64_encode($file);
-    $need = 'data:image/png;base64,';
-    $final = $need.$bfile;
+    if (empty($_POST['web_cap'])) {
+        $file = file_get_contents($_FILES['insert']['tmp_name']);
+        $bfile = base64_encode($file);
+        $need = 'data:image/png;base64,';
+        $final = $need.$bfile;
+    }
+    else {
+        $final = $_POST['web_cap'];
+    }
+    $username = $_SESSION['username'];   
     $sql = "INSERT INTO pictures (username, picture, Likes) VALUES ('$username', '$final', '0')";
     echo $sql;
     try {
@@ -29,8 +32,7 @@
         echo "Error: ".$e->getMessage();
     }
     $conn = null;
-    return (1);
-    echo("PLease lawdy loo");    
+    return (1);  
     
     //echo $stmt;
     //$stmt->execute(['file'=>$final]);

@@ -30,34 +30,23 @@
             <li><a href="./contact.html">Contact</a></li>
         </ul>
         <p>&nbsp;</p>
-        <div id="options" class="choice">
-            <label for="cam_file">Input Method:</label>
-            <select name="cam_file" id="cam_file">
-                <option value="camera">Webcam</option>
-                <option value="image_upload">Image Upload</option>
-            </select>
-        </div>
-        <p>&nbsp;</p>
         <div id="camera" class="loginbox">
-        <video id="video" autoplay></video>
+        <video id="video" autoplay="true"></video>
             <a href="#" id="capture" class="capture-button">Take photo</a>
         </div>
         <p>&nbsp;</p>
-        <div id="upload" class="loginbox">
-            <!-- <img id="upload_image" alt="Please Upload An Image" class="photobooth"><br/>
-            <input type="file" name="img_upload" id="img_upload"> -->
-            <form method="post" action="functions/merge.php" enctype='multipart/form-data'>
-               <!-- <input type='file' name='image'/>
-               <input type='submit' value='insert' name='insert'> -->
-               <canvas id="canvas" width="400" height="300"></canvas>
-               <img id="photo" alt="The screen capture will appear in this box."><br/>
-               <label for="sticker">Stickers</label>
-               <select id="sticker" name="sticker">
-                    <option value="./images/old_beard.jpg">Old Beard</option>
-                    <option value="">None</option>
-               </select><br/>
-               <input type="file" name='insert'/><br/>
-               <input type="submit"/>Upload
+        <div id="upload" class="loginbox_1">
+            <canvas id="canvas" width="400" height="300"></canvas>
+            <img id="photo" alt="The screen capture will appear in this box."><br/>
+            <label for="sticker">Stickers</label>
+            <select id="sticker" name="sticker">
+                <option value="./images/old_beard.jpg">Old Beard</option>
+                <option value="">None</option>
+            </select><br/>
+            <form method="post" action="functions/insert_upload.php" enctype='multipart/form-data'>
+                <input type="hidden" id="image" name="web_cap">
+                <input type="file" class="capture-button1" name='insert'/>
+                <input type="submit" class="capture-button1" value="Upload"/>
             </form>
         </div>
         <p>&nbsp;</p>

@@ -15,6 +15,8 @@
     document.getElementById('capture').addEventListener('click', function() {
         context.drawImage(video, 0, 0, 400, 300);
         photo.setAttribute('src', canvas.toDataURL('image/png'));
+        document.getElementById('image').value = canvas.toDataURL('image/png');
+        //console.log(document.getElementById('image').value);
     });
 
 })();
