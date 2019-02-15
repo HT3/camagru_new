@@ -40,7 +40,7 @@
             <img id="photo" alt="The screen capture will appear in this box."><br/>
             <label for="sticker">Stickers</label>
             <select id="sticker" name="sticker">
-                <option value="./images/old_beard.jpg">Old Beard</option>
+                <option value="./images/Bill.png">Pizza</option>
                 <option value="">None</option>
             </select><br/>
             <form method="post" action="functions/insert_upload.php" enctype='multipart/form-data'>

@@ -6,7 +6,7 @@
         $to = $email;
         $subject = "Camagru: Account Confirmation";
         $confirm_link = hash('sha256', $username);
-        $headers = "From : cunt@student.wethinkcode.co.za \r\n";
+        $headers = "From : me@student.wethinkcode.co.za \r\n";
         $message = "Welcome, $username to Camagru \n
 Thank you joining this new experience, so please confirm your account with the following link:
 http://127.0.0.1:8080/camagru/functions/confirmation.php?passkey=$confirm_link\n
