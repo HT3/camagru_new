@@ -17,15 +17,15 @@
         }
         $results = get_comments($_SESSION['pic_id']);
         foreach ($results as $t) {
-            echo '<div>';
+            echo '<div class="talkbox">';
             echo '<h3>'.$t['username'].'</h3>';
-            echo '<p>'.$t['comment'].'</p>';
+            echo '<p class="talk">'.$t['comment'].'</p>';
             echo '</div>';
         }
     ?>
     <div class="talkbox">
     <form action="insert_comments.php" method="POST">
-    <input type="text_area" id="comment" name="comment" class="comment">
+    <textarea type="text_area" id="comment" name="comment" class="comment">Comment Here</textarea>
     <input type="hidden" name="image_id" value="<?php echo $_SESSION['user_image'] ?>">
     <button type="submit" name="comment_submit" id="comment_submit" value="" onclick="window.location.href='comment.php';">Comment</button>
     </form>

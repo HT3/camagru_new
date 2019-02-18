@@ -14,7 +14,7 @@
     $db_options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
     if ($comment == "")
     {
-        echo '<script>window.location.href="comment.php"</script>';
+        echo '<script>alert("Please input text");window.location.href="../gallery.php"</script>';
     }
     else {
         try {
@@ -32,9 +32,10 @@
             echo "Error: ".$e->getMessage();
         }
         $conn = null;
+        echo '<script>window.location.href="../gallery.php";</script>';
         if (user_details($username)[0]['comment_choice'] == 1) {
             mail_comment($user_image, $username, $comment, $image_id);
         }
-        echo '<script>window.location.href="comment.php";</script>';
+       
     }
 ?>
