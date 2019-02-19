@@ -17,7 +17,7 @@
         }
         $sql = "SELECT * FROM users WHERE username='$username'";
         $req = $conn->prepare($sql);
-        $req->exec();
+        $req->execute();
         if ($req->rowCount() > 0)
             return $req->fetchAll();
         else

@@ -24,7 +24,6 @@
     }
     $username = $_SESSION['username'];   
     $sql = "INSERT INTO pictures (username, picture, Likes) VALUES ('$username', '$final', '0')";
-    echo $sql;
     try {
         $conn->exec($sql);
     }
@@ -32,6 +31,7 @@
         echo "Error: ".$e->getMessage();
     }
     $conn = null;
+    echo '<script>window.location.href="../index.php";</script>';
     return (1);  
     
     //echo $stmt;

@@ -19,7 +19,7 @@
                 <input type="password" name="password_login" required autocomplete="off" placeholder="Enter Password">
                 <button type="submit" name="submit_login" class="btn">Login</button>
                 <p>&nbsp;</p>
-                <a href="#">Guest Gallery</a><br/>
+                <a href="ggallery.php">Guest Gallery</a><br/>
                 <a href="register.php">Don't have an account?</a><br/>
                 <a href="forgot_password.php">Forgot Password?</a>
             </form>

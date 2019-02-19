@@ -17,9 +17,9 @@
         }
         $sql = "SELECT * FROM comments WHERE picture_id='$pic_id'";
         $req = $conn->prepare($sql);
-        $req->exec();
+        $req->execute();
         if ($req->rowCount() > 0)
-            return ($req->fetchAll());
+            return $req->fetchAll();
         else
             return (0);
     }

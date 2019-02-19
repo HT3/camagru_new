@@ -40,7 +40,6 @@ body {
 
 .next {
     width: 100%;
-    display: table-row;
 }
 
 .loginbox {
@@ -50,7 +49,6 @@ body {
     border: 3px solid dodgerblue;
     padding: 10px;
     text-align: center;
-    display: table-cell;
 }
 
 .loginbox input[type="text"], input[type="password"], input[type="email"], 
@@ -151,7 +149,6 @@ textarea {
     overflow: scroll;
     background-color: #fff;
     text-align: center;
-    display: table-cell;
 }
 
 .scroll {

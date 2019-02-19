@@ -24,7 +24,7 @@
                 <button type="submit_signup" name="reg_user" class="btn" value="OK">Register</button><br/>
                 <p>&nbsp;</p>
                 <a href="login.php">Already a member? Sign in</a><br/>
-                <a href="#">Guest Gallery</a><br/>
+                <a href="ggallery.php">Guest Gallery</a><br/>
             </form>
         </div>
     </body>

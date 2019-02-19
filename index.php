@@ -26,7 +26,8 @@
             <li><a class="active" href="./index.php">Camagru</a></li>
             <li><a href="./gallery.php">Gallery</a></li>
             <li><a href="./forgot_password.php">Forgot Password</a></li>
-            <li><a href="./forgot_password.php">Account</a></li>
+            <li><a href="./account.php">Account</a></li>
+            <li><a href="functions/logout.php">Logout</a></li>
             <li><a href="./contact.html">Contact</a></li>
         </ul>
         <p>&nbsp;</p>

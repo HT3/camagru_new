@@ -1,7 +1,6 @@
 <?php
-    function mail_comment($user, $username, $comment, $pic_id)
+    function mail_comment($username, $comment, $pic_id)
     {
-        session_start();
         $host = 'localhost';
         $usa = 'root';
         $password = 'qwerty1234';
@@ -13,26 +12,20 @@
         }
         catch(PDOException $error) {
             echo "Connection Failure: ".$error->getMessage();
-            return (-1);
         }
-        $sql = "SELECT * FROM users WHERE username='$user'";
-        try {
-            $stmt = $conn->prepare($sql);
-            $stmt->exec();
-        }
-        catch (PDOException $error) {
-            echo "Error: ".$err->getMessage();
-            return (0);
-        }
+        $sql = "SELECT * FROM users WHERE username='$username' AND comment_choice='1'";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
         if ($stmt->rowCount() > 0)
         {
-            $res = $stmt->fetchAll();
+            $res = $conn->query("SELECT * FROM users WHERE username='$username'");
+            $res = $res->fetch();
             $subject = "You have a Comment on ".$pic_id;
             $headers = "From me@student.wethinkcode.co.za \r\n";
-            $message = "Someone made this comment on your picture\r\n"
+            $message = "Someone made this comment on your picture:\r\n"
             .$comment;
-            $to = $res[0]['email'];
-            $sent = mail($to, $subject, $message, $headers);
+            
+            $sent = mail($res['email'], $subject, $message, $headers);
         }
     }
 ?>
