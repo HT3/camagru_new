@@ -22,6 +22,9 @@
     else {
         $final = $_POST['web_cap'];
     }
+    if (strlen($final) < 500) {
+        echo '<script>window.location.href="../index.php";alert("No Image Uploaded/ Taken");</script>';
+    }
     $username = $_SESSION['username'];   
     $sql = "INSERT INTO pictures (username, picture, Likes) VALUES ('$username', '$final', '0')";
     try {

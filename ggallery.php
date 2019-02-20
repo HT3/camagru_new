@@ -1,8 +1,3 @@
-<?php
-    session_start();
-    if ($_SESSION['username'] == "" || empty($_SESSION))
-        echo '<script>alert("Please login first to access this page.");window.location.href="login.php";</script>';
-?>
 <html>
     <head>
         <title>Camagru</title>
